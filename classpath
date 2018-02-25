@@ -1,0 +1,5 @@
+ANTLR_ROOT=$(readlink -f "$(dirname "$0")")
+
+CLASSPATH="$ANTLR_ROOT/active/*:$CLASSPATH"
+
+unset ANTLR_ROOT

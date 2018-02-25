@@ -1,0 +1,27 @@
+#!/bin/bash -e
+set -o pipefail
+
+unset TEMPDIR
+
+cleanup() {
+	if [ -d "$TEMPDIR" ]; then
+		rm -rf "$TEMPDIR"
+	fi
+}
+
+trap cleanup EXIT
+
+ROOT=$(readlink -f "$(dirname "$0")")
+JARS="$ROOT/active/*"
+
+TEMPDIR=$(mktemp -d antlr-grun.XXXXXXXX --tmpdir)
+GRAMMAR_NAME=$1
+CLASS_NAME=${GRAMMAR_NAME%.g4}
+CLASS_NAME=${CLASS_NAME##*/}
+shift
+
+antlr -no-listener -Xexact-output-dir -o "$TEMPDIR" "$GRAMMAR_NAME"
+
+cd "$TEMPDIR"
+javac -cp ".:$JARS:$CLASSPATH" *.java
+grun "$CLASS_NAME" "$@"
