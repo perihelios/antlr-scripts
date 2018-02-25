@@ -16,7 +16,7 @@ Run the ANTLR parser generator.
 
 Usage:
 ```
-antlr <options-passed-to-antlr> ...
+antlr <options-passed-to-antlr...>
 ```
 
 ### grun
@@ -24,7 +24,7 @@ Run the test rig (test a compiled grammar).
 
 Usage:
 ```
-grun <options-passed-to-test-rig> ...
+grun <options-passed-to-test-rig...>
 ```
 
 ### grund
@@ -33,7 +33,7 @@ compile it, and run the test rig).
 
 Usage:
 ```
-grund <grammar-file-name> <options-passed-to-test-rig> ...
+grund <grammar-file-name> <options-passed-to-test-rig...>
 ```
 
 Example:
