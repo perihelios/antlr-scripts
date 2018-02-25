@@ -41,11 +41,11 @@ Example:
 grund Java.g4 compilationUnit -gui SomeClass.java
 ```
 
-### classpath
+### antlr-classpath
 Source this script in the current shell to add ANTLR JARs to your
 `CLASSPATH` variable.
 
 Usage:
 ```
-. classpath
+. antlr-classpath
 ```
