@@ -27,6 +27,6 @@ shift
 
 antlr -no-listener -Xexact-output-dir -o "$TEMPDIR" "$GRAMMAR_NAME"
 
-cd "$TEMPDIR"
-javac -cp ".:$JARS:$CLASSPATH" *.java
-grun "$CLASS_NAME" "$@"
+javac -d "$TEMPDIR" -cp ".:$JARS:$CLASSPATH" "$TEMPDIR"/*.java
+
+java -cp ".:$JARS:$TEMPDIR:$CLASSPATH" org.antlr.v4.gui.TestRig "$CLASS_NAME" "$@"
