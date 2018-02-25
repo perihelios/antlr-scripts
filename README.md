@@ -36,6 +36,11 @@ Usage:
 grund <grammar-file-name> <options-passed-to-test-rig> ...
 ```
 
+Example:
+```
+grund Java.g4 compilationUnit -gui SomeClass.java
+```
+
 ### classpath
 Source this script in the current shell to add ANTLR JARs to your
 `CLASSPATH` variable.
