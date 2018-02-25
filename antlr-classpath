@@ -1,4 +1,4 @@
-ANTLR_ROOT=$(readlink -f "$(dirname "$0")")
+ANTLR_ROOT=$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")
 
 CLASSPATH="$ANTLR_ROOT/active/*:$CLASSPATH"
 
