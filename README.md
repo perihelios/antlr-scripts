@@ -1,9 +1,9 @@
 # antlr-scripts
-A collection of *nix scripts for invoking and working with ANTLR parser generator.
+A collection of \*nix scripts for invoking and working with ANTLR parser generator.
 
 ## Installation
 
-These scripts expect to be placed in a directory that *itself* contains
+These scripts expect to be placed in a directory that *itself contains*
 a directory named `active` (or, better yet, a symlink named `active`
 linking to a versioned directory, like `4.7.1`). The `active` directory
 should contain all JARs needed to run ANTLR (perhaps just one, like
