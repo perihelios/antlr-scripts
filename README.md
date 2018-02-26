@@ -33,7 +33,7 @@ compile it, and run the test rig).
 
 Usage:
 ```
-grund <grammar-file-name> <options-passed-to-test-rig...>
+grund <grammar-file> <options-passed-to-test-rig...>
 ```
 
 Example:
